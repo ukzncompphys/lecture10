@@ -1,0 +1,32 @@
+Final projects: either make an nobdy simulator that runs in n*log(n)
+time, or a 2nd order accurate 2-d hydro code.  Either post on github
+or send me your codes, along with instructions on how to run the test
+cases listed below.  Please add comments to you code so I can
+understand what it's doing!  Still waiting for official OK from
+university on dates.  Assuming that's OK, a draft is due on May 26th,
+with the final version due on the 20th of June.
+
+
+nbody:  make a 2-D nbody code that calculates the forces by computing
+the potential, where the potential is found by convolving the density
+with the (softened) potential from a single particle.  Show that a
+single particle at rest remains motionless.  Second, show that a pair
+of particles placed in a circular orbit continue to orbit each other.
+Third, set up both periodic and non-periodic boundary conditions.  Set
+up a problem where hundreds of thousands of particles are initially
+scattered randomly throughout the domain.  Show the evolution with
+time for both periodic and non-periodic boundary conditions.  Track
+the total energy - how well is it conserved?
+
+
+hydro:  make a 2-D 2nd order accurate dimenstionally split hydro code.
+To do this, you'll need to worry about the Riemann problem on the cell
+interfaces, Mike Zingale's hydro notes can walk you through this:
+http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf
+Set up the Zod shock tube problem with over half the array, and plot
+the solution as a function of time.  Set up a "bullet" - a gaussian
+blob of high-density matter moving quickly, and show its evolution
+over time with periodic boundary conditions.  Do this for both a
+super- and sub-sonic bullet.  Finally, set up 2 bullets and shoot them
+into each other.  What does this look like?
+

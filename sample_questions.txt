@@ -1,0 +1,37 @@
+
+When deriving Simpson's rule, we saw in class that the area under a
+parabola dx wide is dx*(f_left+4*f_mid+f_right).  Write a python
+routine to integrate 1/(1+x^2) using Simpson's rule from -10 to 10,
+but one that accepts as input an arbitrary set of positions for the
+bin edges.  You may assume you get f_left/right passed to you, and you
+calculate the position of f_mid.  Run with bins that are 0.1 wide
+between -1 and 1, and 1 wide otherwise.  Compare that to the answer
+with bins 0.1 wide over the entire region from -10 to 10.
+
+multi-dimensional discrete Fourier Transforms are frequently used in
+scientific computing.  Write down the equations for a 2-dimensional
+DFT.  Show that it can be done as a series of 1-D DFTs.  If you have
+an N by M array, how does the operation count for a 2-D FFT scale with
+N and M?  You may ignore any multiplicative constants.
+
+for advection, you might think that changing the numerical derivative
+from the simple upwind estimate (f(x+dx)-f(x))/dx to one involving the
+slope on both sides - [f(x+dx)-f(x-dx)]/2 would be an improvement.
+Derive the CFL stability condition for this and show that it is never
+stable. 
+
+Let's compare mesh-based and particle-based methods for doing N-body
+simulations in two dimensions.  Let's say we have N particles, and
+our mesh is m cells on a side, so a total of m^2 cells.  Furthermore,
+let's assume that for a mesh-based gravity solver, the work is
+dominated by the FFT (i.e. the placing of the N particles onto the
+grid is negligible).  Let's say that the total computational work
+required for a particle-particle solver is a*f(N), where 'a' is a
+constant, and f(N) is some function of N - for instance, if adding new
+particles required a linear amount of extra work, f(N) would be equal
+to N^1.  What is f(N)?  Next, let the work for the grid-based solver
+be bg(m), again for some unknown constant 'b'.  What is g(m)?
+Finally, combine these results to find the number of particles at
+which the work required for an direct force calculation and a grid
+calculation are equal.  If you have more particles than this critical
+value, would it be faster to use a grid-based or a direct gravity calculator?
