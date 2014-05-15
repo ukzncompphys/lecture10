@@ -35,3 +35,20 @@ Finally, combine these results to find the number of particles at
 which the work required for an direct force calculation and a grid
 calculation are equal.  If you have more particles than this critical
 value, would it be faster to use a grid-based or a direct gravity calculator?
+
+****New*****
+model fitting:  we saw in class that if you have data that depend
+linearly on a model, <d>=Am, that chi^2 can be written down as
+(d-Am)^T N^-1 (d-Am).  Show that ignoring the noise, this has solution
+m=(A^T N^-1 A)^-1 A^T N^-1 d
+If we assume the noise is constant, that reduces to 
+m=(A^T A)^-1 A^T d.  
+This is often used to fit polynomials to data models.  However, for
+some classes of functions, other basis sets may be more useful.  
+Fit e^-x between 1 and 5 (using at least 100 points) using x^-n for
+your basis functions (i.e. columns of A) with n an integer, ranging
+from 0 to 5 (i.e. x^0, x^-1...x^-5).  Recall that numpy.dot will do a
+matrix multiply of arrays, alternatively numpy.matrix will turn an
+array into a matrix.
+
+
